@@ -63,9 +63,6 @@ function onYouTubePlayerReady (e) {
 document.addEventListener("spfpartprocess", function (e) {
   if (e.detail && e.detail.part && e.detail.part.data && e.detail.part.data.swfcfg) {
     delete e.detail.part.data.swfcfg.args.ad3_module;
-    if (document.location.href.indexOf("&list=") !== -1 && document.location.href.indexOf("&index=") !== -1) {
-      return;
-    }
     e.detail.part.data.swfcfg.args.autoplay = "0";
   }
 });
